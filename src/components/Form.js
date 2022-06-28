@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import s from './Form.module.css';
 
 class Form extends Component {
   state = { name: '', number: '' };
+
+  static propTypes = {
+    submitHandler: PropTypes.func,
+  };
 
   handleChange = evt => {
     const { name, value } = evt.currentTarget;
